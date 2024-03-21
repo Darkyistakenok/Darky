@@ -58,7 +58,7 @@ body {
 	margin: auto;
 	padding: 0.5em 1em;
 	transition: background .15s linear, color .15s linear;
-	
+	text-align: center;
   }
   button:focus, button:hover {
 	background: none;
