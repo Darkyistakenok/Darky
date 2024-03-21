@@ -1,118 +1,101 @@
-
 body {
-	background: linear-gradient(270deg, #ff4f38, #fb8b3b, #950000);
-	background-size: 500% 600%;
-	-webkit-animation: Gradient 60s ease infinite;
-	-moz-animation: Gradient 60s ease infinite;
-	animation: Gradient 60s ease infinite;
-}
-	  
-@-webkit-keyframes Gradient {
-	0%{background-position:0% 100%}
-	50%{background-position:100% 50%}
-	100%{background-position:0% 70%}
-}
-@-moz-keyframes Gradient {
-	0%{background-position:0% 50%}
-	50%{background-position:100% 20%}
-	100%{background-position:10% 50%}
-}
-@keyframes Gradient { 
-	100%{background-position:0% 50%}
-	50%{background-position:100% 50%}
-	100%{background-position:0% 50%}
+    background: linear-gradient(270deg, #ff4f38, #fb8b3b, #950000);
+    background-size: 500% 600%;
+    -webkit-animation: Gradient 60s ease infinite;
+    -moz-animation: Gradient 60s ease infinite;
+    animation: Gradient 60s ease infinite;
 }
 
-   div {
-	text-align: center;
-   
-		font-family: "Gloock", serif;
-		font-weight: 200;
-		font-style: normal;
-	    
- 
-
+@keyframes Gradient {
+    0% { background-position: 0% 100%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 70%; }
 }
+
+div {
+    text-align: center;
+    font-family: "Gloock", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
 * {
-	
-  }
-  :root {
-	font-size: calc(16px + (48 - 16)*(100vw - 320px)/(2560 - 320));
-  }
-  body, button {
-	font: 1em/25 "Hind", sans-serif;
-  }
-  body {
-	
+    box-sizing: border-box;
+}
 
-	
-  }
-  button {
-	font-family: "Gloock", serif;
-	font-weight: 200;
+:root {
+    font-size: calc(16px + (48 - 16) * (100vw - 320px) / (2560 - 320));
+}
+
+body, button {
+    font: 1em/25 "Hind", sans-serif;
+}
+
+button {
+    font-family: "Gloock", serif;
+    font-weight: 200;
     background-color: transparent;
-	background: transparent;
-	border: none;
-	color: #020202;
-	cursor: pointer;
-	margin: auto;
-	padding: 0.5em 1em;
-	transition: background .15s linear, color .15s linear;
-	text-align: center;
+    border: none;
+    color: #020202;
+    cursor: pointer;
+    margin: auto;
+    padding: 0.5em 1em;
+    transition: background .15s linear, color .15s linear;
+    text-align: center;
+}
 
-  }
-  button:focus, button:hover {
-	background: none;
-  }
-  button:focus {
-	outline: none;
-  }
-  button::-moz-focus-inner {
-	border: tran;
-  }
-  button:active {
-	transform: translateY(0.1em);
-  }
-  .exploding, .exploding:focus, .exploding:hover {
-	background: none;
-	color: none;
-  }
-  .exploding {
-	pointer-events: none;
-	position: relative;
-	will-change: transform;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-  }
-  .particle {
-	position:absolute;
-	top: 255px;
-  }
-  .particle--debris {
-	background: #cd0a0a;
-	
-  }
-  .particle--fire {
-	border-radius: 200%;
-	border-width: 200%;
-  }
-  
-  .button{
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-  }
+button:focus,
+button:hover {
+    background: none;
+}
 
-  .button {
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+button:focus {
+    outline: none;
+}
 
+button::-moz-focus-inner {
+    border: 0;
+}
+
+button:active {
+    transform: translateY(0.1em);
+}
+
+.exploding, .exploding:focus, .exploding:hover {
+    background: none;
+    color: none;
+}
+
+.exploding {
+    pointer-events: none;
+    position: relative;
+    will-change: transform;
+    user-select: none;
+}
+
+.particle {
+    position: absolute;
+    top: 255px;
+}
+
+.particle--debris {
+    background: #cd0a0a;
+}
+
+.particle--fire {
+    border-radius: 200%;
+    border-width: 200%;
+}
+
+.button {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
