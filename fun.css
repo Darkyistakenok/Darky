@@ -59,6 +59,7 @@ body {
 	padding: 0.5em 1em;
 	transition: background .15s linear, color .15s linear;
 	text-align: center;
+
   }
   button:focus, button:hover {
 	background: none;
@@ -87,7 +88,7 @@ body {
   }
   .particle {
 	position:absolute;
-	top: 230px;
+	top: 255px;
   }
   .particle--debris {
 	background: #cd0a0a;
@@ -106,3 +107,12 @@ body {
 	-ms-user-select: none;
 	user-select: none;
   }
+
+  .button {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+
+}
