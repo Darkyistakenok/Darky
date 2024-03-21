@@ -1,29 +1,108 @@
 
 body {
-    background-image: url('https://gffiles.alphacoders.com/276/2766.gif');
-    background-size: cover;
-    
-    
-    
-    height: 100vh;
-    position: absolute;
-    padding:0;
-    margin:0;
+	background: linear-gradient(270deg, #ff4f38, #fb8b3b, #950000);
+	background-size: 500% 600%;
+	-webkit-animation: Gradient 60s ease infinite;
+	-moz-animation: Gradient 60s ease infinite;
+	animation: Gradient 60s ease infinite;
+}
+	  
+@-webkit-keyframes Gradient {
+	0%{background-position:0% 100%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 70%}
+}
+@-moz-keyframes Gradient {
+	0%{background-position:0% 50%}
+	50%{background-position:100% 20%}
+	100%{background-position:10% 50%}
+}
+@keyframes Gradient { 
+	100%{background-position:0% 50%}
+	50%{background-position:100% 50%}
+	100%{background-position:0% 50%}
 }
 
-h1 {
-
-    color: rgb(0, 0, 0);
-    position: fixed;
-    left: 40%;
+   div {
+	text-align: center;
+   
+		font-family: "Gloock", serif;
+		font-weight: 200;
+		font-style: normal;
+	    
+ 
 
 }
+* {
+	
+  }
+  :root {
+	font-size: calc(16px + (48 - 16)*(100vw - 320px)/(2560 - 320));
+  }
+  body, button {
+	font: 1em/25 "Hind", sans-serif;
+  }
+  body {
+	
 
-p {
-
-    
-    color: rgb(0, 0, 0); 
-    position: fixed;
-    top: 10%;
-}
-
+	
+  }
+  button {
+	font-family: "Gloock", serif;
+	font-weight: 200;
+    background-color: transparent;
+	background: transparent;
+	border: none;
+	color: #020202;
+	cursor: pointer;
+	margin: auto;
+	padding: 0.5em 1em;
+	transition: background .15s linear, color .15s linear;
+	
+  }
+  button:focus, button:hover {
+	background: none;
+  }
+  button:focus {
+	outline: none;
+  }
+  button::-moz-focus-inner {
+	border: tran;
+  }
+  button:active {
+	transform: translateY(0.1em);
+  }
+  .exploding, .exploding:focus, .exploding:hover {
+	background: none;
+	color: none;
+  }
+  .exploding {
+	pointer-events: none;
+	position: relative;
+	will-change: transform;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }
+  .particle {
+	position:absolute;
+	top: 230px;
+  }
+  .particle--debris {
+	background: #cd0a0a;
+	
+  }
+  .particle--fire {
+	border-radius: 100%;
+	border-width: 100%;
+  }
+  
+  .button{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  }

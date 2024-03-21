@@ -5,21 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="./fun.css">
-        <meta http-equiv="refresh" content="1; URL=https://www.youtube.com/watch?v=mDhNQPt8An0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+        <script src="fun2.js"></script>
+        <script>
+            function navigateWithDelay() {
+                setTimeout(function() {
+                    window.location.href = 'Water.html'; // Redirect to Water.html after 2000 milliseconds (2 seconds)
+                }, 800); // 2000 milliseconds = 2 seconds
+            }
+        </script>
 
     </head>
 <body>
+<div class="Title"><h1></h1>
+     <a href="#" onclick="navigateWithDelay()">
+            <button id="button" style="width:60px;height:30px;">Fire</button>
+        </a>
 
-    
-<h1>Preview</h1>
-<p>p>
 
-<div class="container" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <p>test</p>
-        <div class="bar2"></div>
-        <p>stylesheet</p>
-        <div class="bar3"></div>
-      </div>
-</body>
+</div>
 </html>
