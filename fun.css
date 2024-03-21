@@ -95,8 +95,8 @@ body {
 	
   }
   .particle--fire {
-	border-radius: 100%;
-	border-width: 100%;
+	border-radius: 200%;
+	border-width: 200%;
   }
   
   .button{
