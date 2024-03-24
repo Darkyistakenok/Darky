@@ -1,9 +1,9 @@
 body {
     background: linear-gradient(270deg, #ff4f38, #fb8b3b, #950000);
     background-size: 500% 600%;
-    -webkit-animation: Gradient 60s ease infinite;
-    -moz-animation: Gradient 60s ease infinite;
-    animation: Gradient 60s ease infinite;
+    -webkit-animation: Gradient 20s ease infinite;
+    -moz-animation: Gradient 20s ease infinite;
+    animation: Gradient 20s ease infinite;
 }
 
 @keyframes Gradient {
@@ -26,7 +26,7 @@ border: none;
 text-align: center;
 font-family: "Gloock", serif;
 font-size:xx-large;
-
+font-weight: 900;
 
 }
 
