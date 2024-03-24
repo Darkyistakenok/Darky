@@ -14,88 +14,36 @@ body {
 
 div {
     text-align: center;
-    font-family: "Gloock", serif;
-    font-weight: 200;
-    font-style: normal;
+    
 }
 
-* {
-    box-sizing: border-box;
+
+  
+button{
+
+background-color: transparent;
+border: none;
+text-align: center;
+font-family: "Gloock", serif;
+font-size:xx-large;
+
+
 }
 
-:root {
-    font-size: calc(16px + (48 - 16) * (100vw - 320px) / (2560 - 320));
-}
+/* Hide default cursor and use fire cursor */
+html, body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16"><path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/></svg>'), default;
+  }
 
-body, button {
-    font: 1em/25 "Hind", sans-serif;
-}
 
-button {
-    font-family: "Gloock", serif;
-    font-weight: 200;
-    background-color: transparent;
-    border: none;
-    color: #020202;
-    cursor: pointer;
-    margin: auto;
-    padding: 0.5em 1em;
-    transition: background .15s linear, color .15s linear;
-    text-align: center;
-}
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  select,
+  textarea {
+    cursor: inherit;
+  }
 
-button:focus,
-button:hover {
-    background: none;
-}
-
-button:focus {
-    outline: none;
-}
-
-button::-moz-focus-inner {
-    border: 0;
-}
-
-button:active {
-    transform: translateY(0.1em);
-}
-
-.exploding, .exploding:focus, .exploding:hover {
-    background: none;
-    color: none;
-}
-
-.exploding {
-    pointer-events: none;
-    position: relative;
-    will-change: transform;
-    user-select: none;
-}
-
-.particle {
-    position: absolute;
-    top: 255px;
-}
-
-.particle--debris {
-    background: #cd0a0a;
-}
-
-.particle--fire {
-    border-radius: 200%;
-    border-width: 200%;
-}
-
-.button {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
+  
