@@ -1,28 +1,82 @@
-html {
+body {
+  background: linear-gradient(90deg, #ffffff, #9fffe5, #d1f7ef);
+  background-size: 500% 600%;
+  -webkit-animation: Gradient 20s ease infinite;
+  -moz-animation: Gradient 20s ease infinite;
+  animation: Gradient 20s ease infinite;
+}
 
-  background-image: linear-gradient(
-  0deg,
-  hsl(0deg 0% 100%) 0%,
-  hsl(171deg 78% 98%) 3%,
-  hsl(171deg 76% 97%) 5%,
-  hsl(171deg 77% 95%) 8%,
-  hsl(173deg 71% 93%) 10%,
-  hsl(173deg 73% 91%) 12%,
-  hsl(171deg 73% 90%) 15%,
-  hsl(171deg 74% 88%) 17%,
-  hsl(171deg 74% 86%) 20%,
-  hsl(171deg 74% 85%) 23%,
-  hsl(171deg 75% 83%) 25%,
-  hsl(171deg 73% 81%) 29%,
-  hsl(171deg 73% 79%) 32%,
-  hsl(171deg 73% 78%) 37%,
-  hsl(171deg 74% 76%) 41%,
-  hsl(171deg 74% 74%) 47%,
-  hsl(171deg 74% 73%) 53%,
-  hsl(171deg 74% 71%) 60%,
-  hsl(171deg 73% 69%) 69%,
-  hsl(171deg 73% 67%) 78%,
-  hsl(171deg 74% 66%) 88%,
-  hsl(171deg 74% 64%) 100%
-);}
+@keyframes Gradient {
+  0% { background-position: 0% 100%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 70%; }
+}
 
+
+html, body { height: 100%; }
+body {
+  
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+
+.general {
+  visibility: hidden;
+  cursor: pointer;
+
+  /* Initial state: visible (opacity: 1; visibility: visible;) */
+  /* Fade-in transition: hidden -> visible  */
+  /* No delay required: visibility is instantaenous and opacity transition controls the fade-in effect */
+  transition: opacity 1s ease-out;
+
+  /* Hover state: visually hidden (opacity: 0; visibility: hidden;) */
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+    /* Fade-out transition: visible -> hidden  */
+    /* Requires delaying the visibility to first run the opacity transition before hidding the element */
+    transition: opacity 1s ease-in, visibility 1s 3s ease-in;
+  }
+}
