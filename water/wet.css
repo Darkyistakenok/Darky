@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(90deg, #ffffff, #9fffe5, #d1f7ef);
+  background: linear-gradient(90deg, #ffffff, #9fffe5, #e8fffa);
   background-size: 500% 600%;
   -webkit-animation: Gradient 20s ease infinite;
   -moz-animation: Gradient 20s ease infinite;
@@ -13,16 +13,33 @@ body {
 }
 
 
-html, body { height: 100%; }
+
 body {
-  
- 
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 
 svg {
-
-  height: 100cm;
-  width: 300cm;
-
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
+
+
+svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center bottom; /* Set the transform origin to the bottom center */
+  transition: transform 1s ease-in-out; /* Use ease-in-out timing function */
+}
+
+svg:hover {
+  transform: scaleY(10); /* Double the height of the SVG when hovering */
+} 
