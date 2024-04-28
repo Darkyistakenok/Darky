@@ -159,3 +159,14 @@ svg:hover .bubbles{
     transform: translateX(-200px);
   }
 }
+
+h1 {
+
+ z-index: 2;
+  size: 100px;
+  top: 35%;
+  left: 7%;
+  position: absolute;
+color: #f1f1f1;}
+
+svg:hover h1{ font-size:20px;}
