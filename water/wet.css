@@ -177,3 +177,7 @@ body h1 {
 body:hover h1 {
   color: #2f91e7; /* Change color on hover */
 }
+
+body:not(:hover) h1 {
+  transition-duration: 2.3s; /* Change back quickly when not hovering */
+}
