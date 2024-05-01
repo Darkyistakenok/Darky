@@ -34,7 +34,7 @@ svg {
   
   height: 100%;
   width: 100%;
-  position: absolute;
+  
   top: 0;
   left: 0;
   transform-origin: center bottom; /* Set the transform origin to the bottom center */
@@ -42,8 +42,8 @@ svg {
   
 }
 
-svg:hover {
-  transform: scaleY(10); /* Double the height of the SVG when hovering */
+body:hover svg {
+  transform: scaleY(10) ; /* Double the height of the SVG when hovering */
 
 
 }
@@ -162,11 +162,18 @@ svg:hover .bubbles{
 
 h1 {
 
- z-index: 2;
+
   size: 100px;
   top: 35%;
   left: 7%;
-  position: absolute;
+  position: fixed;
 color: #f1f1f1;}
 
-svg:hover h1{ font-size:20px;}
+body h1 {
+ 
+  transition: color 3.5s ease; /* Add transition effect to the color property */
+}
+
+body:hover h1 {
+  color: #2f91e7; /* Change color on hover */
+}
