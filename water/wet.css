@@ -170,17 +170,18 @@ h1 {
 color: #f1f1f1;}
 
 body h1 {
- 
-  transition: color 3.5s ease; /* Add transition effect to the color property */
-  transition: font-size ease-in-out 1.5s;
+  transition: color 3.5s ease, font-size 2.3s ease; /* Add transition effect to color and font-size */
+  
+  font-size: initial; /* Set initial font size */
 }
 
 body:hover h1 {
   color: #2f91e7; /* Change color on hover */
-  font-size: 50px;
+  font-size: 50px; /* Change font size on hover */
 }
 
 body:not(:hover) h1 {
-  transition-duration: 2.3s; /* Change back quickly when not hovering */
-  transition: color 2.3s ease, font-size 2.3s ease; /* Change back slowly when not hovering */
+  transition-delay: 1s; /* Delay the transition when not hovering */
+  transition-duration: 0s, 2.3s; /* Change back color and font size quickly when not hovering */
+  font-size: initial; /* Reset font size when not hovering */
 }
