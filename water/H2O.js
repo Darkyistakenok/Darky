@@ -1,6 +1,6 @@
 let canvas, ctx, w, h,
   bubbles = [],
-  bubbleCount = 1000,
+  bubbleCount = 100,
   bubbleChance = 0.7,
   hue = 0;
 
