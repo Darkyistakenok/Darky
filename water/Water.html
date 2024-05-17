@@ -5,51 +5,64 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="wet.css">
-        <meta name="viewport" content="width=960px">
-
+      
         
         <script src="H2O.js"></script>
-        <script> window.addEventListener("load", () => { document.querySelector(".loader").classList.add("loader--hiden")})</script>
+        <script>window.addEventListener("load", () => {
+          const loader = document.querySelector(".loader");
+        
+          loader.classList.add("loader--hidden");
+        
+          loader.addEventListener("transitionend", () => {
+            document.body.removeChild(loader);
+          });
+        });</script>
 
             <style>
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+  transition: opacity 10000s, visibility 5s;
+  z-index: 1001;
+}
 
-            
-            .loader { position :fixed;
-              top:0;
-              left:0;
-              width: 100vw;
-              height: 100vh;
-              display : flex;
-              align-items: center;
-              justify-content: center;
-              background: #333333;
-           transition : opacity 0.75s, visibility 0.75s;
-              z-index: 1001;
-            
-            
-            }
-            .loader--hidden {opacity: 0; visibility: hidden;}
-            .loader::after {
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
-             content: "";
-              height: 75px;
-              width: 75px;
-              border: 15px solid #dddddd;
-              border-top-color: #009578;
-              border-radius: 50%;
-              animation: loading 0.75s ease infinite;
-            }
-            @keyframes loading { 
-              from{ transform: rotate(0turn); }
-                to{ transform: rotate(1turn); }
-              }
-           
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #009578;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
     </style>
     </head>
-
+    <div class="loader"></div>
 <body>
-  <div class="loader"></div>
+
 <div id="SVG-in">
   <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" overflow="auto" shape-rendering="auto" fill="#ffffff">
     <defs>
