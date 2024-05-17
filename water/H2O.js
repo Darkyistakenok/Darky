@@ -122,3 +122,6 @@ window.addEventListener("DOMContentLoaded", init);
 window.addEventListener("resize", resizeReset);
 window.addEventListener("mousemove", mousemove);
 window.addEventListener("mouseout", mouseout);
+
+
+window.addEventListener("load", () => { document.querySelector(".loader").classList.add("loader--hiden")})

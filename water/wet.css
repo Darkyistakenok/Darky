@@ -185,3 +185,5 @@ body:not(:hover) h1 {
   transition-duration: 0s, 2.3s; /* Change back color and font size quickly when not hovering */
   font-size: initial; /* Reset font size when not hovering */
 }
+
+
